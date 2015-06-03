@@ -1,3 +1,4 @@
+/* global define*/
 define(['jquery',
         'handlebars',
         'text!faostat_ui_browse_by_country/html/templates.html',
@@ -30,7 +31,7 @@ define(['jquery',
         this.CONFIG = $.extend(true, {}, this.CONFIG, config);
 
         /* Fix the language, if needed. */
-        this.CONFIG.lang = this.CONFIG.lang != null ? this.CONFIG.lang : 'en';
+        this.CONFIG.lang = this.CONFIG.lang !== null ? this.CONFIG.lang : 'en';
 
         /* Store FAOSTAT language. */
         this.CONFIG.lang_faostat = FAOSTATCommons.iso2faostat(this.CONFIG.lang);
